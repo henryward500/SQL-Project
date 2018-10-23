@@ -1,0 +1,1618 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0807.1415                               -->
+<workbook source-build='2018.1.4 (20181.18.0807.1415)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='CleWasCinSTATS' inline='true' name='federated.15hs79n192jygq1bjze1406seu2r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CleWasCinSTATS' name='textscan.1oim3t70cm6ncg13dw3e01mrziht'>
+            <connection class='textscan' directory='/Users/wardanderson 1/Desktop/Denison/Sophomore year/CS181/SQL-Project' filename='CleWasCinSTATS.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1oim3t70cm6ncg13dw3e01mrziht' name='CleWasCinSTATS.csv' table='[CleWasCinSTATS#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='date' date-parse-format='yyyy' name='yearID' ordinal='1' />
+            <column datatype='real' name='CleSalary' ordinal='2' />
+            <column datatype='string' name='CleTeamID' ordinal='3' />
+            <column datatype='string' name='CleFranchID' ordinal='4' />
+            <column datatype='integer' name='CleH' ordinal='5' />
+            <column datatype='integer' name='CleAB' ordinal='6' />
+            <column datatype='integer' name='CleW' ordinal='7' />
+            <column datatype='integer' name='CleL' ordinal='8' />
+            <column datatype='real' name='CleERA' ordinal='9' />
+            <column datatype='real' name='CleBA' ordinal='10' />
+            <column datatype='real' name='CleWinpct' ordinal='11' />
+            <column datatype='real' name='CleFP' ordinal='12' />
+            <column datatype='real' name='WasSalary' ordinal='13' />
+            <column datatype='string' name='WasTeamID' ordinal='14' />
+            <column datatype='string' name='WasFranchID' ordinal='15' />
+            <column datatype='integer' name='WasH' ordinal='16' />
+            <column datatype='integer' name='WasAB' ordinal='17' />
+            <column datatype='integer' name='WasW' ordinal='18' />
+            <column datatype='integer' name='WasL' ordinal='19' />
+            <column datatype='real' name='WasERA' ordinal='20' />
+            <column datatype='real' name='WasBA' ordinal='21' />
+            <column datatype='real' name='WasWinpct' ordinal='22' />
+            <column datatype='real' name='WasFP' ordinal='23' />
+            <column datatype='real' name='CinSalary' ordinal='24' />
+            <column datatype='string' name='CinTeamID' ordinal='25' />
+            <column datatype='string' name='CinFranchID' ordinal='26' />
+            <column datatype='integer' name='CinH' ordinal='27' />
+            <column datatype='integer' name='CinAB' ordinal='28' />
+            <column datatype='integer' name='CinW' ordinal='29' />
+            <column datatype='integer' name='CinL' ordinal='30' />
+            <column datatype='real' name='CinERA' ordinal='31' />
+            <column datatype='real' name='CinBA' ordinal='32' />
+            <column datatype='real' name='CinWinpct' ordinal='33' />
+            <column datatype='real' name='CinFP' ordinal='34' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yearID</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[yearID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>yearID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleSalary</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CleSalary]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleSalary</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleTeamID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CleTeamID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleTeamID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleFranchID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CleFranchID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleFranchID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CleH]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleH</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleAB</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CleAB]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleAB</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleW</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CleW]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleW</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CleL]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleL</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleERA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CleERA]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleERA</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleBA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CleBA]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleBA</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleWinpct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CleWinpct]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleWinpct</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CleFP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CleFP]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CleFP</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasSalary</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WasSalary]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasSalary</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasTeamID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WasTeamID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasTeamID</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasFranchID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WasFranchID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasFranchID</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WasH]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasH</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasAB</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WasAB]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasAB</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasW</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WasW]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasW</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[WasL]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasL</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasERA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WasERA]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasERA</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasBA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WasBA]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasBA</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasWinpct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WasWinpct]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasWinpct</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WasFP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[WasFP]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>WasFP</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinSalary</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CinSalary]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinSalary</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinTeamID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CinTeamID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinTeamID</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinFranchID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CinFranchID]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinFranchID</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CinH]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinH</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinAB</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CinAB]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinAB</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinW</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CinW]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinW</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CinL]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinL</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinERA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CinERA]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinERA</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinBA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CinBA]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinBA</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinWinpct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CinWinpct]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinWinpct</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CinFP</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CinFP]</local-name>
+            <parent-name>[CleWasCinSTATS.csv]</parent-name>
+            <remote-alias>CinFP</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Cin AB' datatype='integer' name='[CinAB]' role='measure' type='quantitative' />
+      <column caption='Cin BA' datatype='real' name='[CinBA]' role='measure' type='quantitative' />
+      <column caption='Cin ERA' datatype='real' name='[CinERA]' role='measure' type='quantitative' />
+      <column caption='Cin FP' datatype='real' name='[CinFP]' role='measure' type='quantitative' />
+      <column caption='Cin Franch ID' datatype='string' name='[CinFranchID]' role='dimension' type='nominal' />
+      <column caption='Cin H' datatype='integer' name='[CinH]' role='measure' type='quantitative' />
+      <column caption='Cin L' datatype='integer' name='[CinL]' role='measure' type='quantitative' />
+      <column caption='Cin Salary' datatype='real' name='[CinSalary]' role='measure' type='quantitative' />
+      <column caption='Cin Team ID' datatype='string' name='[CinTeamID]' role='dimension' type='nominal' />
+      <column caption='Cin W' datatype='integer' name='[CinW]' role='measure' type='quantitative' />
+      <column caption='Cin Winpct' datatype='real' name='[CinWinpct]' role='measure' type='quantitative' />
+      <column caption='Cle AB' datatype='integer' name='[CleAB]' role='measure' type='quantitative' />
+      <column caption='Cle BA' datatype='real' name='[CleBA]' role='measure' type='quantitative' />
+      <column caption='Cle ERA' datatype='real' name='[CleERA]' role='measure' type='quantitative' />
+      <column caption='Cle FP' datatype='real' name='[CleFP]' role='measure' type='quantitative' />
+      <column caption='Cle Franch ID' datatype='string' name='[CleFranchID]' role='dimension' type='nominal' />
+      <column caption='Cle H' datatype='integer' name='[CleH]' role='measure' type='quantitative' />
+      <column caption='Cle L' datatype='integer' name='[CleL]' role='measure' type='quantitative' />
+      <column caption='Cle Salary' datatype='real' name='[CleSalary]' role='measure' type='quantitative' />
+      <column caption='Cle Team ID' datatype='string' name='[CleTeamID]' role='dimension' type='nominal' />
+      <column caption='Cle W' datatype='integer' name='[CleW]' role='measure' type='quantitative' />
+      <column caption='Cle Winpct' datatype='real' name='[CleWinpct]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Was AB' datatype='integer' name='[WasAB]' role='measure' type='quantitative' />
+      <column caption='Was BA' datatype='real' name='[WasBA]' role='measure' type='quantitative' />
+      <column caption='Was ERA' datatype='real' name='[WasERA]' role='measure' type='quantitative' />
+      <column caption='Was FP' datatype='real' name='[WasFP]' role='measure' type='quantitative' />
+      <column caption='Was Franch ID' datatype='string' name='[WasFranchID]' role='dimension' type='nominal' />
+      <column caption='Was H' datatype='integer' name='[WasH]' role='measure' type='quantitative' />
+      <column caption='Was L' datatype='integer' name='[WasL]' role='measure' type='quantitative' />
+      <column caption='Was Salary' datatype='real' name='[WasSalary]' role='measure' type='quantitative' />
+      <column caption='Was Team ID' datatype='string' name='[WasTeamID]' role='dimension' type='nominal' />
+      <column caption='Was W' datatype='integer' name='[WasW]' role='measure' type='quantitative' />
+      <column caption='Was Winpct' datatype='real' name='[WasWinpct]' role='measure' type='quantitative' />
+      <column caption='Year ID' datatype='date' name='[yearID]' role='dimension' type='ordinal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[CinBA]' derivation='Sum' name='[sum:CinBA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CinSalary]' derivation='Sum' name='[sum:CinSalary:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CinWinpct]' derivation='Sum' name='[sum:CinWinpct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CleBA]' derivation='Sum' name='[sum:CleBA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CleSalary]' derivation='Sum' name='[sum:CleSalary:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[CleWinpct]' derivation='Sum' name='[sum:CleWinpct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[WasBA]' derivation='Sum' name='[sum:WasBA:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[WasSalary]' derivation='Sum' name='[sum:WasSalary:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[WasWinpct]' derivation='Sum' name='[sum:WasWinpct:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.278571' measure-ordering='alphabetic' measure-percentage='0.721429' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#074080'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinBA:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasBA:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleBA:qk]&quot;</bucket>
+            </map>
+            <map to='#999999'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]&quot;</bucket>
+            </map>
+            <map to='#fc0107'>
+              <bucket>&quot;[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleSalary:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+    <datasource caption='AvgSalaryDf' inline='true' name='federated.1fse1pm0k915yp15tv6oe1i214up' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AvgSalaryDf' name='textscan.07q6mwa1sgttkp15vxq0s0vt5zbv'>
+            <connection class='textscan' directory='/Users/wardanderson 1/Desktop/Denison/Sophomore year/CS181/SQL-Project' filename='AvgSalaryDf.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07q6mwa1sgttkp15vxq0s0vt5zbv' name='AvgSalaryDf.csv' table='[AvgSalaryDf#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='TeamName' ordinal='1' />
+            <column datatype='real' name='AvgSalary' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AvgSalaryDf.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[AvgSalaryDf.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TeamName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TeamName]</local-name>
+            <parent-name>[AvgSalaryDf.csv]</parent-name>
+            <remote-alias>TeamName</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgSalary</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgSalary]</local-name>
+            <parent-name>[AvgSalaryDf.csv]</parent-name>
+            <remote-alias>AvgSalary</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Salary' datatype='real' name='[AvgSalary]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Team Name' datatype='string' name='[TeamName]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;CinAvgSalary&quot;' value='Cincinnati' />
+          <alias key='&quot;CleAvgSalary&quot;' value='Cleveland' />
+          <alias key='&quot;WasAvgSalary&quot;' value='Washington' />
+        </aliases>
+      </column>
+      <column-instance column='[TeamName]' derivation='None' name='[none:TeamName:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.4625' measure-ordering='alphabetic' measure-percentage='0.5375' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:TeamName:nk]' type='palette'>
+            <map to='#074080'>
+              <bucket>&quot;CleAvgSalary&quot;</bucket>
+            </map>
+            <map to='#999999'>
+              <bucket>&quot;WasAvgSalary&quot;</bucket>
+            </map>
+            <map to='#fc0107'>
+              <bucket>&quot;CinAvgSalary&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='AvgWinPctDf' inline='true' name='federated.0cmnhew03kgign1ef1aw2040iyaw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AvgWinPctDf' name='textscan.1pgm4l71ipgsm30zprd5m1d3pl92'>
+            <connection class='textscan' directory='/Users/wardanderson 1/Desktop/Denison/Sophomore year/CS181/SQL-Project' filename='AvgWinPctDf.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1pgm4l71ipgsm30zprd5m1d3pl92' name='AvgWinPctDf.csv' table='[AvgWinPctDf#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='TeamName' ordinal='1' />
+            <column datatype='real' name='AvgWinPct' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AvgWinPctDf.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[AvgWinPctDf.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TeamName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TeamName]</local-name>
+            <parent-name>[AvgWinPctDf.csv]</parent-name>
+            <remote-alias>TeamName</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgWinPct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgWinPct]</local-name>
+            <parent-name>[AvgWinPctDf.csv]</parent-name>
+            <remote-alias>AvgWinPct</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Win Pct' datatype='real' name='[AvgWinPct]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Team Name' datatype='string' name='[TeamName]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;CinAvgWinPct&quot;' value='Cincinnati' />
+          <alias key='&quot;CleAvgWinPct&quot;' value='Cleveland ' />
+          <alias key='&quot;WasAvgWinPct&quot;' value='Washington' />
+        </aliases>
+      </column>
+      <column-instance column='[TeamName]' derivation='None' name='[none:TeamName:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.462687' measure-ordering='alphabetic' measure-percentage='0.537313' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:TeamName:nk]' type='palette'>
+            <map to='#074080'>
+              <bucket>&quot;CleAvgWinPct&quot;</bucket>
+            </map>
+            <map to='#999999'>
+              <bucket>&quot;WasAvgWinPct&quot;</bucket>
+            </map>
+            <map to='#fc0107'>
+              <bucket>&quot;CinAvgWinPct&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='StatePre2000Post2000' inline='true' name='federated.0ovufit1wr58gz144nqis0pvzhgm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='StatePre2000Post2000' name='textscan.0y7g3zt0dz463t132skak1mtv6as'>
+            <connection class='textscan' directory='/Users/wardanderson 1/Desktop/Denison/Sophomore year/CS181/SQL-Project' filename='StatePre2000Post2000.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0y7g3zt0dz463t132skak1mtv6as' name='StatePre2000Post2000.csv' table='[StatePre2000Post2000#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='State' ordinal='1' />
+            <column datatype='real' name='PlayersPre2000' ordinal='2' />
+            <column datatype='real' name='PlayersPost2000' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[StatePre2000Post2000.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[StatePre2000Post2000.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[StatePre2000Post2000.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlayersPre2000</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PlayersPre2000]</local-name>
+            <parent-name>[StatePre2000Post2000.csv]</parent-name>
+            <remote-alias>PlayersPre2000</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlayersPost2000</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PlayersPost2000]</local-name>
+            <parent-name>[StatePre2000Post2000.csv]</parent-name>
+            <remote-alias>PlayersPost2000</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[PlayersPost2000]' role='measure' type='quantitative' />
+      <column datatype='real' name='[PlayersPre2000]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column-instance column='[PlayersPost2000]' derivation='Sum' name='[sum:PlayersPost2000:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[PlayersPre2000]' derivation='Sum' name='[sum:PlayersPre2000:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.4' measure-ordering='alphabetic' measure-percentage='0.6' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#891212'>
+              <bucket>&quot;[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]&quot;</bucket>
+            </map>
+            <map to='#fc0107'>
+              <bucket>&quot;[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPost2000:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='PitchingCrowdImpact' inline='true' name='federated.04pv7lk013ow7w1goa1fs11c0yhj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='PitchingCrowdImpact' name='textscan.1n594we0494bwo0znro4i0dgbkqn'>
+            <connection class='textscan' directory='/Users/wardanderson 1/Desktop/Denison/Sophomore year/CS181/SQL-Project' filename='PitchingCrowdImpact.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1n594we0494bwo0znro4i0dgbkqn' name='PitchingCrowdImpact.csv' table='[PitchingCrowdImpact#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='yearID' ordinal='1' />
+            <column datatype='integer' name='SUM(p.L)' ordinal='2' />
+            <column datatype='integer' name='Attendance' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[PitchingCrowdImpact.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[PitchingCrowdImpact.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yearID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[yearID]</local-name>
+            <parent-name>[PitchingCrowdImpact.csv]</parent-name>
+            <remote-alias>yearID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SUM(p.L)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SUM(p.L)]</local-name>
+            <parent-name>[PitchingCrowdImpact.csv]</parent-name>
+            <remote-alias>SUM(p.L)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Attendance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Attendance]</local-name>
+            <parent-name>[PitchingCrowdImpact.csv]</parent-name>
+            <remote-alias>Attendance</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Year ID' datatype='integer' name='[yearID]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.438835' measure-ordering='alphabetic' measure-percentage='0.561165' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg Salary'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' underline='true'>Average Salary of Cincinnati Reds, Cleveland Indians, and Washington Nationals since 1985</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AvgSalaryDf' name='federated.1fse1pm0k915yp15tv6oe1i214up' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1fse1pm0k915yp15tv6oe1i214up'>
+            <column caption='Avg Salary' datatype='real' name='[AvgSalary]' role='measure' type='quantitative' />
+            <column caption='Team Name' datatype='string' name='[TeamName]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;CinAvgSalary&quot;' value='Cincinnati' />
+                <alias key='&quot;CleAvgSalary&quot;' value='Cleveland' />
+                <alias key='&quot;WasAvgSalary&quot;' value='Washington' />
+              </aliases>
+            </column>
+            <column-instance column='[TeamName]' derivation='None' name='[none:TeamName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AvgSalary]' derivation='Sum' name='[sum:AvgSalary:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' scope='cols' value='Average Salary (USD)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-weight' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' value='bold' />
+            <format attr='color' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' value='#000000' />
+            <format attr='color' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' value='*#,###,###' />
+            <format attr='font-weight' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' value='bold' />
+            <format attr='color' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]' value='bold' />
+            <format attr='color' field='[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]' />
+              <text column='[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]</rows>
+        <cols>[federated.1fse1pm0k915yp15tv6oe1i214up].[sum:AvgSalary:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='AvgWinPct'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' underline='true'>Average Win Percentage for Cincinnati Reds, Cleveland Indians, and Washington Nationals since 1985</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AvgWinPctDf' name='federated.0cmnhew03kgign1ef1aw2040iyaw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cmnhew03kgign1ef1aw2040iyaw'>
+            <column caption='Avg Win Pct' datatype='real' name='[AvgWinPct]' role='measure' type='quantitative' />
+            <column caption='Team Name' datatype='string' name='[TeamName]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;CinAvgWinPct&quot;' value='Cincinnati' />
+                <alias key='&quot;CleAvgWinPct&quot;' value='Cleveland ' />
+                <alias key='&quot;WasAvgWinPct&quot;' value='Washington' />
+              </aliases>
+            </column>
+            <column-instance column='[TeamName]' derivation='None' name='[none:TeamName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AvgWinPct]' derivation='Sum' name='[sum:AvgWinPct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]' value='19' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-weight' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[sum:AvgWinPct:qk]' value='bold' />
+            <format attr='color' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[sum:AvgWinPct:qk]' value='#000000' />
+            <format attr='width' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]' value='249' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[sum:AvgWinPct:qk]' value='bold' />
+            <format attr='color' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[sum:AvgWinPct:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]' value='bold' />
+            <format attr='color' field='[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]' />
+              <text column='[federated.0cmnhew03kgign1ef1aw2040iyaw].[sum:AvgWinPct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0cmnhew03kgign1ef1aw2040iyaw].[sum:AvgWinPct:qk]</rows>
+        <cols>[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Reds'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' underline='true'>Number of Cincinnati Reds players from 41 States in the United States before and after 2000</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='StatePre2000Post2000' name='federated.0ovufit1wr58gz144nqis0pvzhgm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ovufit1wr58gz144nqis0pvzhgm'>
+            <column datatype='real' name='[PlayersPost2000]' role='measure' type='quantitative' />
+            <column datatype='real' name='[PlayersPre2000]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PlayersPost2000]' derivation='Sum' name='[sum:PlayersPost2000:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PlayersPre2000]' derivation='Sum' name='[sum:PlayersPre2000:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPost2000:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPost2000:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' value='#000000' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[Multiple Values]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[Multiple Values]' value='#000000' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[none:State:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[none:State:nk]' value='bold' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' value='#000000' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[Multiple Values]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[Multiple Values]' value='#000000' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[none:State:nk]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[none:State:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPost2000:qk]' value='bold' />
+            <format attr='color' field='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPost2000:qk]' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' />
+              <text column='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPre2000:qk]' />
+              <text column='[federated.0ovufit1wr58gz144nqis0pvzhgm].[sum:PlayersPost2000:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ovufit1wr58gz144nqis0pvzhgm].[Multiple Values]</rows>
+        <cols>([federated.0ovufit1wr58gz144nqis0pvzhgm].[none:State:nk] / [federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Salary Comparison 3 teams'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' underline='true'>Average annual salary of Cincinnati Reds, Cleveland Indians, and Washington Nationals since 1985</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CleWasCinSTATS' name='federated.15hs79n192jygq1bjze1406seu2r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15hs79n192jygq1bjze1406seu2r'>
+            <column caption='Cin Salary' datatype='real' name='[CinSalary]' role='measure' type='quantitative' />
+            <column caption='Cle Salary' datatype='real' name='[CleSalary]' role='measure' type='quantitative' />
+            <column caption='Was Salary' datatype='real' name='[WasSalary]' role='measure' type='quantitative' />
+            <column-instance column='[CinSalary]' derivation='Sum' name='[sum:CinSalary:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CleSalary]' derivation='Sum' name='[sum:CleSalary:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[WasSalary]' derivation='Sum' name='[sum:WasSalary:qk]' pivot='key' type='quantitative' />
+            <column caption='Year ID' datatype='date' name='[yearID]' role='dimension' type='ordinal' />
+            <column-instance column='[yearID]' derivation='Year' name='[yr:yearID:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15hs79n192jygq1bjze1406seu2r].[yr:yearID:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:yearID:ok]' />
+              <groupfilter function='member' level='[yr:yearID:ok]' member='2014' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.15hs79n192jygq1bjze1406seu2r].[yr:yearID:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk]' scope='rows' value='Cincinnati Salary (USD)' />
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleSalary:qk]' scope='rows' value='Cleveland Salary (USD)' />
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]' scope='rows' value='Washington Salary (USD)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk]' value='' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]' value='#000000' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleSalary:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleSalary:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[yr:yearID:ok]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[yr:yearID:ok]' value='bold' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#000000' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#fc0107' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleSalary:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#000000' />
+                <format attr='font-weight' value='normal' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#074080' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-weight' value='bold' />
+                <format attr='color' value='#000000' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#999999' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.15hs79n192jygq1bjze1406seu2r].[sum:CinSalary:qk] + ([federated.15hs79n192jygq1bjze1406seu2r].[sum:CleSalary:qk] + [federated.15hs79n192jygq1bjze1406seu2r].[sum:WasSalary:qk]))</rows>
+        <cols>[federated.15hs79n192jygq1bjze1406seu2r].[yr:yearID:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Win Percentage 3 Teams'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' underline='true'>Win Percentage of Cincinnati Reds, Cleveland Indians, and Washington Nationals since 1985 </run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CleWasCinSTATS' name='federated.15hs79n192jygq1bjze1406seu2r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15hs79n192jygq1bjze1406seu2r'>
+            <column caption='Cin Winpct' datatype='real' name='[CinWinpct]' role='measure' type='quantitative' />
+            <column caption='Cle Winpct' datatype='real' name='[CleWinpct]' role='measure' type='quantitative' />
+            <column caption='Was Winpct' datatype='real' name='[WasWinpct]' role='measure' type='quantitative' />
+            <column-instance column='[CinWinpct]' derivation='Sum' name='[sum:CinWinpct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CleWinpct]' derivation='Sum' name='[sum:CleWinpct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[WasWinpct]' derivation='Sum' name='[sum:WasWinpct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[yearID]' derivation='Year-Trunc' name='[tyr:yearID:qk]' pivot='key' type='quantitative' />
+            <column caption='Year ID' datatype='date' name='[yearID]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]' scope='rows' value='Cleveland Winpct (%)' />
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]' scope='rows' value='Cincinnati Winpct (%)' />
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]' scope='rows' value='Washington Winpct (%)' />
+            <format attr='title' class='0' field='[federated.15hs79n192jygq1bjze1406seu2r].[tyr:yearID:qk]' scope='cols' value='Year' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]' value='bold' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]' value='#000000' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.15hs79n192jygq1bjze1406seu2r].[tyr:yearID:qk]' value='bold' />
+            <format attr='color' field='[federated.15hs79n192jygq1bjze1406seu2r].[tyr:yearID:qk]' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#fc0107' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#074080' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#999999' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.15hs79n192jygq1bjze1406seu2r].[sum:CinWinpct:qk] + ([federated.15hs79n192jygq1bjze1406seu2r].[sum:CleWinpct:qk] + [federated.15hs79n192jygq1bjze1406seu2r].[sum:WasWinpct:qk]))</rows>
+        <cols>[federated.15hs79n192jygq1bjze1406seu2r].[tyr:yearID:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='114'>
+    <window class='worksheet' name='Salary Comparison 3 teams'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Win Percentage 3 Teams'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Avg Salary'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1fse1pm0k915yp15tv6oe1i214up].[none:TeamName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='AvgWinPct'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='225'>
+            <card pane-specification-id='0' param='[federated.0cmnhew03kgign1ef1aw2040iyaw].[none:TeamName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Reds'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='0' param='[federated.0ovufit1wr58gz144nqis0pvzhgm].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
