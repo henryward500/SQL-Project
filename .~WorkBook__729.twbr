@@ -527,7 +527,7 @@
       <column-instance column='[WasBA]' derivation='Sum' name='[sum:WasBA:qk]' pivot='key' type='quantitative' />
       <column-instance column='[WasSalary]' derivation='Sum' name='[sum:WasSalary:qk]' pivot='key' type='quantitative' />
       <column-instance column='[WasWinpct]' derivation='Sum' name='[sum:WasWinpct:qk]' pivot='key' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.278571' measure-ordering='alphabetic' measure-percentage='0.721429' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.27767' measure-ordering='alphabetic' measure-percentage='0.72233' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
@@ -896,7 +896,7 @@
         <relation connection='textscan.1n594we0494bwo0znro4i0dgbkqn' name='PitchingCrowdImpact.csv' table='[PitchingCrowdImpact#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='yearID' ordinal='1' />
+            <column datatype='date' date-parse-format='yyyy' name='yearID' ordinal='1' />
             <column datatype='integer' name='SUM(p.L)' ordinal='2' />
             <column datatype='integer' name='Attendance' ordinal='3' />
           </columns>
@@ -931,14 +931,15 @@
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>yearID</remote-name>
-            <remote-type>20</remote-type>
+            <remote-type>7</remote-type>
             <local-name>[yearID]</local-name>
             <parent-name>[PitchingCrowdImpact.csv]</parent-name>
             <remote-alias>yearID</remote-alias>
             <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SUM(p.L)</remote-name>
@@ -968,7 +969,7 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <column caption='Year ID' datatype='integer' name='[yearID]' role='dimension' type='ordinal' />
+      <column caption='Year ID' datatype='date' name='[yearID]' role='dimension' type='ordinal' />
       <layout dim-ordering='alphabetic' dim-percentage='0.438835' measure-ordering='alphabetic' measure-percentage='0.561165' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
@@ -1333,7 +1334,15 @@
     <worksheet name='Sheet 6'>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='PitchingCrowdImpact' name='federated.04pv7lk013ow7w1goa1fs11c0yhj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04pv7lk013ow7w1goa1fs11c0yhj'>
+            <column datatype='integer' name='[Attendance]' role='measure' type='quantitative' />
+            <column-instance column='[Attendance]' derivation='Sum' name='[sum:Attendance:qk]' pivot='key' type='quantitative' />
+            <column caption='Year ID' datatype='date' name='[yearID]' role='dimension' type='ordinal' />
+            <column-instance column='[yearID]' derivation='Year' name='[yr:yearID:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style />
@@ -1345,8 +1354,8 @@
             <mark class='Automatic' />
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.04pv7lk013ow7w1goa1fs11c0yhj].[yr:yearID:ok]</rows>
+        <cols>[federated.04pv7lk013ow7w1goa1fs11c0yhj].[sum:Attendance:qk]</cols>
       </table>
     </worksheet>
     <worksheet name='Win Percentage 3 Teams'>
@@ -1485,7 +1494,7 @@
         </edge>
       </cards>
     </window>
-    <window class='worksheet' name='Win Percentage 3 Teams'>
+    <window class='worksheet' maximized='true' name='Win Percentage 3 Teams'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1592,7 +1601,7 @@
         </edge>
       </cards>
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 6'>
+    <window class='worksheet' name='Sheet 6'>
       <cards>
         <edge name='left'>
           <strip size='160'>
